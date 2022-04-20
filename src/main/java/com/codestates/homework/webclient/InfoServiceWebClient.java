@@ -17,7 +17,7 @@ public class InfoServiceWebClient {
     public Mono<Map> requestJob(String name) {
         Mono<Map> responseJob = this.webClient.get()
                 .uri(uriBuilder ->
-                        uriBuilder.path("/job")
+                        uriBuilder.path("/info-service/job")
                                 .queryParam("name", name)
                                 .build()
                 )
